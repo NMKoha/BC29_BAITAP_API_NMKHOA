@@ -19,19 +19,19 @@ getListQLND();
 
 function renderListQLND(data) {
     var contentHTML = "";
-    data.forEach(function(product, index) {
+    data.forEach(function(nguoiDung, index) {
         contentHTML += `
             <tr>
-                <td>${product.id}</td>
-                <td>${product.taiKhoan}</td>
-                <td>${product.matKhau}</td>
-                <td>${product.hoTen}</td>
-                <td>${product.email}</td>
-                <td>${product.ngonNgu}</td>
-                <td>${product.loaiND}</td>
+                <td>${nguoiDung.id}</td>
+                <td>${nguoiDung.taiKhoan}</td>
+                <td>${nguoiDung.matKhau}</td>
+                <td>${nguoiDung.hoTen}</td>
+                <td>${nguoiDung.email}</td>
+                <td>${nguoiDung.ngonNgu}</td>
+                <td>${nguoiDung.loaiND}</td>
                 <td>
-                    <button class="btn btn-info" data-toggle="modal" data-target="#myModal" onclick="editND(${product.id})">Sửa</button>
-                    <button class="btn btn-danger" onclick="deleteND(${product.id})">Xoá</button>
+                    <button class="btn btn-info" data-toggle="modal" data-target="#myModal" onclick="editND(${nguoiDung.id})">Sửa</button>
+                    <button class="btn btn-danger" onclick="deleteND(${nguoiDung.id})">Xoá</button>
                 </td>
             </tr>
         `
@@ -82,6 +82,11 @@ function addND(isAdd) {
             taiKhoan,
             "errorTaiKhoan",
             "(*) Vui lòng nhập tài khoản"
+        ) && validation.kiemTraTaiKhoan(
+            taiKhoan,
+            "errorTaiKhoan",
+            "(*) Tài khoản bị trùng",
+            nguoiDung.arr
         );
     }
     //họ tên    
@@ -91,7 +96,7 @@ function addND(isAdd) {
         "(*) Vui lòng nhập họ tên"
     ) && validation.kiemTraChuoiKyTu(
         hoTen,
-        "erroHoTen",
+        "errorHoTen",
         "(*) Vui lòng nhập chuỗi ký tự"
     );
     //mật khẩu
@@ -99,6 +104,12 @@ function addND(isAdd) {
         matKhau,
         "errorMatKhau",
         "(*) Vui lòng nhập mật khẩu"
+    ) && validation.kiemTraDoDaiKyTu(
+        matKhau,
+        "errorMatKhau",
+        6,
+        8,
+        "(*) Vui lòng nhập từ 6 - 8 ký tự"
     );
     //email
     isValid &= validation.kiemTraRong(
@@ -129,8 +140,14 @@ function addND(isAdd) {
         moTa,
         "errorMoTa",
         "(*) Vui lòng nhập mô tả"
+    ) && validation.kiemTraDoDaiKyTu(
+        moTa,
+        "errorMoTa",
+        1,
+        60,
+        "(*) Vui lòng nhập dưới 60 ký tự"
     );
-    console.log(kiemTraChon);
+
     if (!isValid) return; // nếu không valid thì sẽ dừng hàm lại
     //đối tượng người dùng
     var nguoiDung = new NguoiDung("", taiKhoan, hoTen, matKhau, email, loaiNguoiDung, loaiNgonNgu, moTa, hinhAnh);

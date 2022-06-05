@@ -44,4 +44,23 @@ function Validation() {
         getEle(errorId).style.display = "block";
         return false;
     };
+    this.kiemTraTaiKhoan = function(value, errorId, mess, arr) {
+        var isStatus = true;
+
+        arr.forEach(function(item, index) {
+            if (item.taiKhoan === value) {
+                isStatus = false;
+            }
+        });
+        if (isStatus) {
+            //true
+            getEle(errorId).innerHTML = "";
+            getEle(errorId).style.display = "none";
+            return true;
+        }
+        //false
+        getEle(errorId).innerHTML = mess;
+        getEle(errorId).style.display = "block";
+        return false;
+    };
 };
