@@ -1,0 +1,84 @@
+.contact {
+    background-image: url("./../images/accent_bottom_wave_01.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: contain;
+    background-position: bottom;
+    .contact_img {
+        img {
+            height: 95%;
+            margin: 0px 0px 0px $mg-6;
+        }
+    }
+    .contact__form {
+        form {
+            width: $w-1;
+            margin: $mg-1 auto;
+            border-radius: $w-3;
+            padding: $pd-11 $pd-3 $pd-3 $pd-3;
+            box-shadow: 0 $pd-3 $pd-3 $mg-8 $color-black-1;
+            background-color: $color-white-1;
+            h1 {
+                @include styleText($fs-10,
+                $color-black-1,
+                $fw-3);
+            }
+            input {
+                margin-top: $mg-2;
+                margin-bottom: $bd-4;
+                padding: $mg-1 $mg-1 $mg-1 $w-6;
+                border-radius: $bd-3;
+                width: 95%;
+                border: $w-4 solid $color-white-2;
+                font-size: $fs-11;
+                display: inline-block;
+            }
+            select {
+                margin-top: $mg-2;
+                margin-bottom: $bd-4;
+                padding: $mg-1 $mg-1 $mg-1 $w-6;
+                border-radius: $bd-3;
+                width: 98%;
+                border: $w-4 solid $color-white-2;
+                font-size: $fs-11;
+            }
+            textarea {
+                font-size: $fs-11;
+                border: $w-4 solid $color-white-2;
+                border-radius: $pd-9;
+                padding: $mg-1 $mg-1 $mg-1 $w-6;
+            }
+            button {
+                background-color: $color-pink-1 !important;
+                border-radius: $bd-3;
+                padding: $pd-9 $mg-4;
+                @include styleText($fs-2,
+                $color-white-1,
+                $fw-2);
+                border: none;
+                margin: $pd-11 0;
+                transition: all 0.3s;
+                &:hover {
+                    background-color: $color-white-1 !important;
+                    @include styleText($fs-2,
+                    $color-pink-1,
+                    $fw-2);
+                    border: $w-4 solid $color-pink-1;
+                    transform: scaleX(1);
+                }
+            }
+        }
+        .fontuser {
+            position: relative;
+            i {
+                position: absolute;
+                left: $pd-9;
+                top: $w-5;
+                color: $color-pink-1;
+            }
+            .text {
+                top: $pd-9;
+            }
+        }
+    }
+}

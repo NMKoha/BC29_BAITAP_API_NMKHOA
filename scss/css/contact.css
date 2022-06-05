@@ -1,0 +1,9 @@
+.contact {
+  background-image: url("./../../images/accent_bottom_wave_01.png");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: contain;
+  background-position: bottom;
+  z-index: 0;
+}
+/*# sourceMappingURL=contact.css.map */

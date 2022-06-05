@@ -1,0 +1,77 @@
+header {
+    background-image: url("./../images/yellow_top_wave_01.png");
+    height: $pd-8;
+    background-size: cover;
+    background-position: left;
+    .navbar-brand {
+        line-height: 0;
+        float: left;
+    }
+    .navbar-nav {
+        .nav-item {
+            padding: $fs-1 $fs-1 $fs-1 $fs-1;
+            transition: all 0.5s;
+            .nav-link {
+                @include styleText($fs-2,
+                $color-black-1,
+                $fw-2);
+            }
+            &:hover {
+                .nav-link {
+                    @include styleText($fs-2,
+                    $color-pink-1,
+                    $fw-2);
+                }
+                &::after {
+                    @include styleText($fs-5,
+                    $color-pink-1,
+                    $fw-2);
+                    display: block;
+                    transform: scale(1.5);
+                    background-color: $color-pink-1;
+                }
+            }
+            &::after {
+                content: "";
+                background-color: transparent;
+                height: $w-2;
+                width: $w-2;
+                border-radius: 50%;
+                display: block;
+                transition: all 0.5s;
+                margin: 0 auto;
+                margin-top: $mg-1;
+            }
+        }
+        .active {
+            &::after {
+                background-color: $color-pink-1;
+            }
+        }
+        .nav-logo {
+            margin: $fs-1 $mg-7 0 0;
+            .btn {
+                background-color: $color-pink-1 !important;
+                border-radius: $bd-1;
+                padding: $mg-1 $mg-2;
+                @include styleText($fs-2,
+                $color-white-1,
+                $fw-2);
+                transition: all 0.5s;
+                &:hover {
+                    background-color: $color-white-1 !important;
+                    @include styleText($fs-2,
+                    $color-pink-1,
+                    $fw-2);
+                    border: $w-4 solid $color-pink-1;
+                }
+            }
+            a {
+                margin: $mg-1;
+                @include styleText($fs-2,
+                $color-black-1,
+                $fw-2)
+            }
+        }
+    }
+}

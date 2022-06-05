@@ -1,0 +1,54 @@
+.products {
+    height: $fs-7;
+    .products__img {
+        background-image: url("./../images/Violet_top_left_wave.png");
+        background-repeat: no-repeat;
+        height: $pd-8;
+        background-size: cover;
+        margin-top: $mg-5;
+    }
+    .products__content {
+        background-color: #dcd1f0fe;
+    }
+    .products__content1 {
+        .teacher {
+            text-align: center;
+            border-radius: $fs-1;
+            margin: $mg-2 0;
+            border: none;
+            transition: all 0.5s;
+            &:hover {
+                box-shadow: 0px $pd-9 $mg-2 0px grey;
+            }
+            // overflow: hidden;
+            h3 {
+                @include styleText($fs-8,
+                $color-pink-1,
+                $fw-2);
+            }
+            h1 {
+                @include styleText($fs-9,
+                $color-black-1,
+                $fw-3);
+            }
+            p {
+                @include styleText($fs-1,
+                $color-black-1,
+                $fw-1);
+            }
+            .card_img {
+                overflow: hidden;
+                height: 100%;
+                border-radius: $fs-1 $fs-1 0 0;
+                img {
+                    transition: all 0.5s;
+                    &:hover {
+                        transform: scale(1.05);
+                        background-size: contain;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

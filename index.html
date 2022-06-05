@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabula</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <!-- BS4 CSS     -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            /* Safari */
+            animation: spin 2s linear infinite;
+        }
+        /* Safari */
+        
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md container navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#"><img src="./images/crest.png" alt=""></a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Elements</a>
+                    </li>
+                    <div class="nav-logo">
+                        <button class="btn"><i class="fas fa-phone"></i>  (+1) 555 234-8765</button>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+    <section class="Carousel ">
+        <div class=" ">
+            <div class="row ">
+                <div class="col-12 col-md-6  ">
+                    <div class="carousel__content">
+                        <h3>ABOUT US</h3>
+                        <h1>The language <br>teaching experts</h1>
+                    </div>
+
+                </div>
+                <div class="col-md-6 carousel__img">
+                    <img class="img-fluid " src="./images/hero_team.png " alt=" ">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="products section ">
+        <div class="products__img">
+
+        </div>
+        <div class="products__content">
+            <div class="products__content1 container">
+                <div id="loader" class="loader" style="display:none"></div>
+                <div id="listProducts" class="row ">
+                    <!-- <div class="col-12 col-md-6 col-lg-3 ">
+                        <div class="card teacher">
+                            <div class="card_img"><img src="./images/teacher_1.jpg " class="card-img-top " alt="... "></div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between ">
+                                    <div>
+                                        <h3 class="teacher__title">ITALIAN</h3>
+                                        <h1 class="teacher__title1">July Roberts</h1>
+                                        <p class="teacher__text ">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-12 col-md-6 col-lg-3 ">
+                        <div class="card teacher">
+                            <div class="card_img"><img src="./images/teacher_2.jpg " class="card-img-top " alt="... "></div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between ">
+                                    <div>
+                                        <h3 class="teacher__title">FRENCH</h3>
+                                        <h1 class="teacher__title1">Jon Stone</h1>
+                                        <p class="teacher__text ">Nanotechnology immersion along the information.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-12 col-md-6 col-lg-3 ">
+                        <div class="card teacher">
+                            <div class="card_img"><img src="./images/teacher_3.jpg " class="card-img-top " alt="... "></div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between ">
+                                    <div>
+                                        <h3 class="teacher__title">JAPANESE</h3>
+                                        <h1 class="teacher__title1">Emma Stone</h1>
+                                        <p class="teacher__text ">Bring to the table win-win survival strategies to ensure.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-12 col-md-6 col-lg-3 ">
+                        <div class="card teacher">
+                            <div class="card_img"><img src="./images/teacher_4.jpg " class="card-img-top " alt="... "></div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between ">
+                                    <div>
+                                        <h3 class="teacher__title">CHINESE</h3>
+                                        <h1 class="teacher__title1">Mark Lee</h1>
+                                        <p class="teacher__text ">Proactive domination. At the end of the day, going forward.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-12 col-md-6 col-lg-3 ">
+                        <div class="card teacher">
+                            <div class="card_img"><img src="./images/teacher_5.jpg " class="card-img-top " alt="... "></div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between ">
+                                    <div>
+                                        <h3 class="teacher__title">RUSSIAN</h3>
+                                        <h1 class="teacher__title1">John Doe</h1>
+                                        <p class="teacher__text ">A new normal that has evolved from generation X.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-12 col-md-6 col-lg-3 ">
+                        <div class="card teacher">
+                            <div class="card_img"><img src="./images/teacher_6.jpg " class="card-img-top " alt="... "></div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between ">
+                                    <div>
+                                        <h3 class="teacher__title">SWEDEN</h3>
+                                        <h1 class="teacher__title1">Jane Smith</h1>
+                                        <p class="teacher__text ">Heading towards a streamlined cloud solution.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-12 col-md-6 col-lg-3 ">
+                        <div class="card teacher">
+                            <div class="card_img"><img src="./images/teacher_7.jpg " class="card-img-top " alt="... "></div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between ">
+                                    <div>
+                                        <h3 class="teacher__title">SPANISH</h3>
+                                        <h1 class="teacher__title1">Hanna Alverez</h1>
+                                        <p class="teacher__text ">Content in real-time will have multiple touchpoints.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-12 col-md-6 col-lg-3 ">
+                        <div class="card teacher">
+                            <div class="card_img"> <img src="./images/teacher_8.jpg " class="card-img-top " alt="... "></div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between ">
+                                    <div>
+                                        <h3 class="teacher__title">ITALIAN</h3>
+                                        <h1 class="teacher__title1">July Roberts</h1>
+                                        <p class="teacher__text ">Capitalize on low hanging fruit to identify a ballpark.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact ">
+        <div class="contact_img container">
+            <div class="row ">
+                <div class="col-md-7">
+                    <img src="./images/conatct_inner.png" alt="">
+                </div>
+                <div class="col-md-5 contact__form">
+
+                    <form action="a" method="post" value>
+                        <h1 style="text-align:center">Find Your Course</h1>
+                        <div class="d-flex">
+
+
+                            <div class="fontuser">
+                                <i class="fas fa-user"></i>
+                                <input type="text" name="username" placeholder="Name "></input>
+                            </div>
+                            <div class="fontuser">
+                                <i class="fas fa-envelope"></i>
+                                <input type="text" name="email" placeholder="E-mail"></input>
+                            </div>
+                        </div>
+
+                        <div class="fontuser">
+                            <i class="fas fa-graduation-cap"></i>
+                            <select name="" id="english">
+                           
+                                <optgroup label="">
+                                    <option value="english"></i>English</option>
+                                    <option value="french">French</option>
+                                    <option value="spanish">Spanish</option>
+                                    <option value="german">German</option>s                                
+                                </optgroup>
+                                
+                            </select>
+                        </div>
+                        <div class="fontuser">
+                            <i class="fas fa-comment-alt text"></i>
+                            <textarea id="" placeholder="Message" cols="50" rows="5"></textarea>
+                        </div>
+
+
+                        <button>SEND</button>
+
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="container ">
+            <div class="row align-items-center ">
+                <div class="col-3 footer1">
+                    <div>
+                        <h2>Contact us</h2>
+                    </div>
+
+                    <div class="footer1__content">
+                        <p> Franklin St, Greenpoint Ave</p>
+                        <p>+2342 5446 67</p>
+                        <p>Monday - Friday: 8 AM - 5 PM</p>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+
+                    </div>
+                </div>
+                <div class="col-3 footer2">
+                    <div>
+                        <h2>Quick Links</h2>
+                    </div>
+                    <div class="footer2__content">
+                        <p>Home</p>
+                        <hr>
+                        <p>Courses</p>
+                        <hr>
+                        <p>Schedule</p>
+                        <hr>
+                        <p>Blog</p>
+                        <hr>
+                    </div>
+
+
+                </div>
+                <div class="col-3 footer2">
+                    <div>
+                        <h2>About</h2>
+                    </div>
+                    <div class="footer2__content">
+                        <p>About Us</p>
+                        <hr>
+                        <p>Events</p>
+                        <hr>
+                        <p>Get Quote</p>
+                        <hr>
+                        <p>Contact</p>
+                        <hr>
+                    </div>
+
+
+
+                </div>
+                <div class="col-3 footer3">
+                    <div>
+                        <h2>Newsletter</h2>
+                    </div>
+                    <div><button>Your email</button>
+                        <br>
+                        <button>SUBCRIBE</button></div>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Thư viện hỗ trợ jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <!-- BS4 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./src/services/index.js"></script>
+    <script src="./src/main.js"></script>
+</body>
+
+</html>

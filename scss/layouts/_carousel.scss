@@ -1,0 +1,16 @@
+.Carousel {
+    h3 {
+        @include styleText($fs-3, $color-pink-1, $fw-2);
+        margin: $pd-10 0px 0px $pd-10;
+    }
+    h1 {
+        @include styleText($fs-6, $color-black-1, $fw-3);
+        margin: $mg-2 0px $pd-10;
+    }
+    .carousel__img {
+        img {
+            margin: $mg-9 0 0 $mg-8;
+            width: 90%;
+        }
+    }
+}

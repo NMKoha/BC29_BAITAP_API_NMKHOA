@@ -1,0 +1,320 @@
+header {
+  background-image: url("./../images/yellow_top_wave_01.png");
+  height: 210px;
+  background-size: cover;
+  background-position: left;
+}
+
+header .navbar-brand {
+  line-height: 0;
+  float: left;
+}
+
+header .navbar-nav .nav-item {
+  padding: 15px 15px 15px 15px;
+  transition: all 0.5s;
+}
+
+header .navbar-nav .nav-item .nav-link {
+  font-size: 1rem;
+  color: #181818 !important;
+  font-weight: 600;
+}
+
+header .navbar-nav .nav-item:hover .nav-link {
+  font-size: 1rem;
+  color: #b61984 !important;
+  font-weight: 600;
+}
+
+header .navbar-nav .nav-item:hover::after {
+  font-size: 90px;
+  color: #b61984 !important;
+  font-weight: 600;
+  display: block;
+  transform: scale(1.5);
+  background-color: #b61984;
+}
+
+header .navbar-nav .nav-item::after {
+  content: "";
+  background-color: transparent;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+header .navbar-nav .active::after {
+  background-color: #b61984;
+}
+
+header .navbar-nav .nav-logo {
+  margin: 15px -40px 0 0;
+}
+
+header .navbar-nav .nav-logo .btn {
+  background-color: #b61984 !important;
+  border-radius: 22px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff !important;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+header .navbar-nav .nav-logo .btn:hover {
+  background-color: #fff !important;
+  font-size: 1rem;
+  color: #b61984 !important;
+  font-weight: 600;
+  border: 1px solid #b61984;
+}
+
+header .navbar-nav .nav-logo a {
+  margin: 10px;
+  font-size: 1rem;
+  color: #181818 !important;
+  font-weight: 600;
+}
+
+.Carousel h3 {
+  font-size: 1.4rem;
+  color: #b61984 !important;
+  font-weight: 600;
+  margin: 80px 0px 0px 80px;
+}
+
+.Carousel h1 {
+  font-size: 4rem;
+  color: #181818 !important;
+  font-weight: 700;
+  margin: 20px 0px 80px;
+}
+
+.Carousel .carousel__img img {
+  margin: -110px 0 0 -10px;
+  width: 90%;
+}
+
+.products {
+  height: 1000px;
+}
+
+.products .products__img {
+  background-image: url("./../images/Violet_top_left_wave.png");
+  background-repeat: no-repeat;
+  height: 210px;
+  background-size: cover;
+  margin-top: -140px;
+}
+
+.products .products__content {
+  background-color: #dcd1f0fe;
+}
+
+.products .products__content1 .teacher {
+  text-align: center;
+  border-radius: 15px;
+  margin: 20px 0;
+  border: none;
+  transition: all 0.5s;
+}
+
+.products .products__content1 .teacher:hover {
+  box-shadow: 0px 15px 20px 0px grey;
+}
+
+.products .products__content1 .teacher h3 {
+  font-size: 0.7rem;
+  color: #b61984 !important;
+  font-weight: 600;
+}
+
+.products .products__content1 .teacher h1 {
+  font-size: 1.5rem;
+  color: #181818 !important;
+  font-weight: 700;
+}
+
+.products .products__content1 .teacher p {
+  font-size: 15px;
+  color: #181818 !important;
+  font-weight: 400;
+}
+
+.products .products__content1 .teacher .card_img {
+  overflow: hidden;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+.products .products__content1 .teacher .card_img img {
+  transition: all 0.5s;
+}
+
+.products .products__content1 .teacher .card_img img:hover {
+  transform: scale(1.05);
+  background-size: contain;
+  height: 100%;
+}
+
+.contact {
+  background-image: url("./../images/accent_bottom_wave_01.png");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.contact .contact_img img {
+  height: 95%;
+  margin: 0px 0px 0px 50px;
+}
+
+.contact .contact__form form {
+  width: 400px;
+  margin: 10px auto;
+  border-radius: 12px;
+  padding: 40px 13px 13px 13px;
+  box-shadow: 0 13px 13px -10px #181818;
+  background-color: #fff;
+}
+
+.contact .contact__form form h1 {
+  font-size: 2.5rem;
+  color: #181818 !important;
+  font-weight: 700;
+}
+
+.contact .contact__form form input {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  padding: 10px 10px 10px 35px;
+  border-radius: 30px;
+  width: 95%;
+  border: 1px solid gainsboro;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.contact .contact__form form select {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  padding: 10px 10px 10px 35px;
+  border-radius: 30px;
+  width: 98%;
+  border: 1px solid gainsboro;
+  font-size: 0.8rem;
+}
+
+.contact .contact__form form textarea {
+  font-size: 0.8rem;
+  border: 1px solid gainsboro;
+  border-radius: 15px;
+  padding: 10px 10px 10px 35px;
+}
+
+.contact .contact__form form button {
+  background-color: #b61984 !important;
+  border-radius: 30px;
+  padding: 15px 60px;
+  font-size: 1rem;
+  color: #fff !important;
+  font-weight: 600;
+  border: none;
+  margin: 40px 0;
+  transition: all 0.3s;
+}
+
+.contact .contact__form form button:hover {
+  background-color: #fff !important;
+  font-size: 1rem;
+  color: #b61984 !important;
+  font-weight: 600;
+  border: 1px solid #b61984;
+  transform: scaleX(1);
+}
+
+.contact .contact__form .fontuser {
+  position: relative;
+}
+
+.contact .contact__form .fontuser i {
+  position: absolute;
+  left: 15px;
+  top: 33px;
+  color: #b61984;
+}
+
+.contact .contact__form .fontuser .text {
+  top: 15px;
+}
+
+.footer {
+  background-image: url("./../images/footer_background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.footer h2 {
+  font-size: 1.5rem;
+  color: #fff !important;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.footer .footer2 {
+  margin-top: 10px;
+}
+
+.footer .footer1__content,
+.footer a,
+.footer .footer2__content {
+  font-size: 15px;
+  color: #fff !important;
+  font-weight: 400;
+}
+
+.footer .footer1__content p,
+.footer a p,
+.footer .footer2__content p {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.footer .footer1__content p:hover,
+.footer a p:hover,
+.footer .footer2__content p:hover {
+  color: #c2c0c0;
+}
+
+.footer .footer2__content {
+  line-height: 3px;
+}
+
+.footer button {
+  background-color: #fff !important;
+  border-radius: 30px;
+  padding: 15px 80px;
+  font-size: 1rem;
+  color: #b61984 !important;
+  font-weight: 600;
+  border: none;
+  margin: 10px 0;
+  transition: all 0.3s;
+}
+
+.footer button:hover {
+  background-color: #b61984 !important;
+  font-size: 1rem;
+  color: #fff !important;
+  font-weight: 600;
+  border: 1px solid #fff;
+  transform: scaleX(1);
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,51 @@
+.footer {
+    background-image: url("./../images/footer_background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    h2 {
+        @include styleText( $fs-9,
+        $color-white-1,
+        $fw-2);
+        margin: $mg-2 0;
+    }
+    .footer2 {
+        margin-top: $mg-1;
+    }
+    .footer1__content,
+    a,
+    .footer2__content {
+        @include styleText($fs-1,
+        $color-white-1,
+        $fw-1);
+        p {
+            cursor: pointer;
+            transition: all 0.2s;
+            &:hover {
+                color: rgb(194, 192, 192);
+            }
+        }
+    }
+    .footer2__content {
+        line-height: $lh-1;
+    }
+    button {
+        background-color: $color-white-1 !important;
+        border-radius: $bd-3;
+        padding: $pd-9 $pd-10;
+        @include styleText($fs-2,
+        $color-pink-1,
+        $fw-2);
+        border: none;
+        margin: $mg-1 0;
+        transition: all 0.3s;
+        &:hover {
+            background-color: $color-pink-1 !important;
+            @include styleText($fs-2,
+            $color-white-1,
+            $fw-2);
+            border: $w-4 solid $color-white-1;
+            transform: scaleX(1);
+        }
+    }
+}
